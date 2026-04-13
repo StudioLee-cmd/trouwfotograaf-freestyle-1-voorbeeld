@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MomentVast — Trouwfotograaf Amsterdam</title>
+  <meta name="description" content="MomentVast is uw trouwfotograaf in Amsterdam. Tijdloze bruiloftsfotografie die elk moment vastlegt met passie en oog voor detail.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="/" class="nav-logo">MomentVast</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">Over ons</a></li>
+        <li><a href="#services">Diensten</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Contact</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Top trouwfotografen in Amsterdam</span>
+      <h1>Elk moment verdient <span>tijdloze</span> fotografie</h1>
+      <p>Wij leggen de mooiste dag van uw leven vast met een artistieke blik en oprechte emotie. Van voorbereiding tot feest.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Boek een gesprek</a>
+        <a href="#portfolio" class="btn-outline">Bekijk portfolio</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="line"></div>
+    </div>
+  </section>
+  <div class="ticker" style="background:var(--color-accent,#f5a623);padding:12px 0;overflow:hidden;">
+    <div style="display:flex;gap:48px;animation:tickerScroll 20s linear infinite;white-space:nowrap;">
+      <span><iconify-icon icon="lucide:camera"></iconify-icon> Bruiloft</span><span><iconify-icon icon="lucide:heart"></iconify-icon> Loveshoot</span><span><iconify-icon icon="lucide:church"></iconify-icon> Ceremonie</span><span><iconify-icon icon="lucide:party-popper"></iconify-icon> Receptie</span><span><iconify-icon icon="lucide:book-open"></iconify-icon> Album</span><span><iconify-icon icon="lucide:plane"></iconify-icon> Drone</span><span><iconify-icon icon="lucide:camera"></iconify-icon> Bruiloft</span><span><iconify-icon icon="lucide:heart"></iconify-icon> Loveshoot</span><span><iconify-icon icon="lucide:church"></iconify-icon> Ceremonie</span><span><iconify-icon icon="lucide:party-popper"></iconify-icon> Receptie</span><span><iconify-icon icon="lucide:book-open"></iconify-icon> Album</span><span><iconify-icon icon="lucide:plane"></iconify-icon> Drone</span>
+    </div>
+  </div>
+  <style>@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}</style>
+  <style>.ticker span{display:inline-flex;align-items:center;gap:8px;font-size:0.85rem;font-weight:700;color:var(--color-bg,#0a0a0f);text-transform:uppercase;letter-spacing:0.05em;}</style>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="images/about.jpg" alt="Trouwfotograaf aan het werk in Amsterdam">
+        </div>
+        <div class="about-content reveal">
+          <p class="about-tag">Over MomentVast</p>
+          <h2>Passie voor <span>bruiloften</span> sinds dag een</h2>
+          <p>Wij geloven dat elke bruiloft uniek is. Ons team combineert jarenlange ervaring met een frisse, moderne aanpak. Geen stijve poses, wel echte emoties.</p>
+          <p>Vanuit ons hart van Amsterdam reizen we door heel Nederland om de mooiste momenten vast te leggen. Of het nu gaat om een intieme ceremonie of een groots feest.</p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Bruiloften</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">12</div>
+              <div class="stat-label">Jaar ervaring</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">4.9</div>
+              <div class="stat-label">Google score</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ======================== BEFORE / AFTER ======================== -->
+  <section class="ba-section" style="height:100vh;position:relative;overflow:hidden;background:#000;">
+    <div style="width:100%;height:100%;position:relative;">
+      <img src="images/craft.jpg" alt="Na" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;">
+      <img src="images/hero.jpg" alt="Voor" id="baBefore" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;">
+      <div id="baLabel" style="position:absolute;z-index:3;bottom:10%;left:50%;transform:translateX(-50%);text-align:center;opacity:0;">
+        <span style="display:inline-block;background:var(--color-accent,#C1FF72);color:#0a0a0a;padding:8px 20px;border-radius:99px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">Scroll om te zien</span>
+        <h2 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.15;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,0.6);">Van oud naar <em style="color:var(--color-accent,#C1FF72);">nieuw</em></h2>
+      </div>
+    </div>
+  </section>
+<!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Onze diensten</p>
+        <h2>Alles voor uw <span>perfecte dag</span></h2>
+        <p>Van de eerste blik tot de laatste dans — wij zijn er bij elk moment dat telt.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><i data-lucide="camera"></i></div>
+          <h3>Bruiloftsfotografie</h3>
+          <p>Volledige dagcoverage met oog voor spontane momenten en emotionele hoogtepunten.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i data-lucide="heart"></i></div>
+          <h3>Loveshoot</h3>
+          <p>Een ontspannen fotosessie op een bijzondere locatie, ideaal als kennismaking voor de grote dag.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i data-lucide="church"></i></div>
+          <h3>Ceremonie</h3>
+          <p>Discrete en professionele fotografie tijdens de ceremonie, zonder het moment te verstoren.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i data-lucide="party-popper"></i></div>
+          <h3>Receptie</h3>
+          <p>Het feest, de speeches, de tranen van geluk — alles wordt prachtig vastgelegd.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i data-lucide="book-open"></i></div>
+          <h3>Album</h3>
+          <p>Handgemaakt fotoalbum met de mooiste beelden van uw dag, een tijdloos aandenken.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i data-lucide="plane"></i></div>
+          <h3>Drone</h3>
+          <p>Adembenemende luchtfoto's van uw locatie en ceremonie voor een extra dimensie.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Portfolio</p>
+        <h2>Recent <span>werk</span></h2>
+        <p>Een greep uit onze meest recente bruiloften en loveshoots.</p>
+      </div>
+      <div class="carousel-wrapper reveal">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img src="images/carousel.jpg" alt="Bruiloft Amsterdam">
+            <div class="carousel-overlay">
+              <h3>Sophie & Daan</h3>
+              <p>Bruiloft in de Vondelkerk, Amsterdam</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/project1.jpg" alt="Bruiloft strand">
+            <div class="carousel-overlay">
+              <h3>Lisa & Joost</h3>
+              <p>Strandbruiloft in Zandvoort</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/project2.jpg" alt="Bruiloft kasteel">
+            <div class="carousel-overlay">
+              <h3>Emma & Thomas</h3>
+              <p>Kasteelbruiloft in Utrecht</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-nav" id="carouselNav">
+        <button class="carousel-dot active" data-index="0"></button>
+        <button class="carousel-dot" data-index="1"></button>
+        <button class="carousel-dot" data-index="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAIL -->
+  <section class="detail-strip">
+    <div class="container">
+      <div class="detail-grid">
+        <div class="detail-content reveal">
+          <h2>Waarom kiezen voor <span>MomentVast</span>?</h2>
+          <p>Wij gaan verder dan alleen foto's maken. Wij vertellen het verhaal van uw dag in beelden die generaties meegaan.</p>
+          <ul class="detail-list">
+            <li><i data-lucide="check" style="width:18px;height:18px"></i> Persoonlijke kennismaking vooraf</li>
+            <li><i data-lucide="check" style="width:18px;height:18px"></i> Binnen 4 weken alle foto's geleverd</li>
+            <li><i data-lucide="check" style="width:18px;height:18px"></i> Online galerij om te delen met gasten</li>
+            <li><i data-lucide="check" style="width:18px;height:18px"></i> Second shooter beschikbaar</li>
+          </ul>
+        </div>
+        <div class="detail-image reveal">
+          <img src="images/detail.jpg" alt="Bruiloftsdetail">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Reviews</p>
+        <h2>Wat onze <span>stellen</span> zeggen</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-stars">
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+          </div>
+          <p>"De foto's zijn nog mooier dan we hadden durven dromen. Elk moment is perfect vastgelegd."</p>
+          <div class="review-author">Sophie & Daan</div>
+          <div class="review-role">Bruiloft Amsterdam</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars">
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+          </div>
+          <p>"Ongelooflijk fijn team. Ze vallen niet op maar leggen alles vast. Heel professioneel."</p>
+          <div class="review-author">Lisa & Joost</div>
+          <div class="review-role">Bruiloft Zandvoort</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars">
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:currentColor"></i>
+          </div>
+          <p>"Het album is een kunstwerk. We kijken er elke week nog in. Absolute aanrader!"</p>
+          <div class="review-author">Emma & Thomas</div>
+          <div class="review-role">Bruiloft Utrecht</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team">
+    <div class="container">
+      <div class="team-grid">
+        <div class="team-image reveal">
+          <img src="images/team.jpg" alt="Team MomentVast">
+        </div>
+        <div class="team-content reveal">
+          <h2>Ontmoet het <span>team</span></h2>
+          <p>Ons kleine maar gedreven team bestaat uit fotografen die zelf ook gek zijn op bruiloften. We werken met hart en ziel aan elke opdracht.</p>
+          <p>We nemen bewust een beperkt aantal bruiloften per jaar aan, zodat we elke klant de aandacht kunnen geven die ze verdienen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section class="blog">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Blog</p>
+        <h2>Tips & <span>inspiratie</span></h2>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card reveal">
+          <img src="images/craft.jpg" alt="Bruiloft tips">
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Tips</span>
+            <h3>10 tips voor de perfecte bruiloftsfoto's</h3>
+            <p>Hoe zorgt u ervoor dat uw trouwfoto's er natuurlijk en ontspannen uitzien?</p>
+            <a href="blog.html" class="read-more">Lees meer &rarr;</a>
+          </div>
+        </div>
+        <div class="blog-card reveal">
+          <img src="images/kitchen.jpg" alt="Trouwlocaties">
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Locaties</span>
+            <h3>De mooiste trouwlocaties in Amsterdam</h3>
+            <p>Van historische grachtenpanden tot moderne lofts — onze favorieten op een rij.</p>
+            <a href="blog.html" class="read-more">Lees meer &rarr;</a>
+          </div>
+        </div>
+        <div class="blog-card reveal">
+          <img src="images/carousel.jpg" alt="Loveshoot">
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Loveshoot</span>
+            <h3>Waarom een loveshoot essentieel is</h3>
+            <p>Ontdek waarom steeds meer stellen kiezen voor een loveshoot voor de bruiloft.</p>
+            <a href="blog.html" class="read-more">Lees meer &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="cta-content">
+      <h2>Klaar om uw <span>verhaal</span> vast te leggen?</h2>
+      <p>Neem contact op voor een vrijblijvend kennismakingsgesprek. We bespreken graag de mogelijkheden voor uw grote dag.</p>
+      <a href="#contact" class="btn-primary">Neem contact op</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">MomentVast</a>
+          <p>Trouwfotografie met gevoel. Gevestigd in Amsterdam, werkzaam door heel Nederland.</p>
+        </div>
+        <div>
+          <h4>Diensten</h4>
+          <ul>
+            <li><a href="#services">Bruiloftsfotografie</a></li>
+            <li><a href="#services">Loveshoot</a></li>
+            <li><a href="#services">Album</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Bedrijf</h4>
+          <ul>
+            <li><a href="#about">Over ons</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@momentvast.nl">info@momentvast.nl</a></li>
+            <li><a href="tel:+31201234567">020-1234567</a></li>
+            <li><a href="#">Amsterdam</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MomentVast. Alle rechten voorbehouden.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    lucide.createIcons();
+
+    // Navbar scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Hamburger
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    // Reveal animations with GSAP
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll('.reveal').forEach(el => {
+      gsap.fromTo(el, { opacity: 0, y: 40 }, {
+        opacity: 1, y: 0, duration: .8, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+      });
+    });
+
+    // Carousel
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let current = 0;
+    function goToSlide(i) {
+      current = i;
+      track.style.transform = `translateX(-${i * 100}%)`;
+      dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+    }
+    dots.forEach(d => d.addEventListener('click', () => goToSlide(+d.dataset.index)));
+    setInterval(() => goToSlide((current + 1) % 3), 5000);
+  </script>
+
+    // Before/After slider
+    (function() {
+      var before = document.getElementById('baBefore');
+      var label = document.getElementById('baLabel');
+      if (!before || typeof gsap === 'undefined') return;
+      gsap.registerPlugin(ScrollTrigger);
+      var tl = gsap.timeline({
+        scrollTrigger: { trigger: '.ba-section', start: 'top top', end: '+=200%', pin: true, scrub: 0.5, anticipatePin: 1 }
+      });
+      tl.fromTo(before, { clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(0 100% 0 0)', duration: 1, ease: 'none' });
+      tl.fromTo(label, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.5);
+    })();
+
+</body>
+</html>
